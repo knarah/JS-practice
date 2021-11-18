@@ -7,14 +7,39 @@ const loginButton = loginForm.querySelector("button");
 const greeting = document.querySelector("#greeting");
 //console.log(greeting);
 
+const HIDDEN_CLASS = 'hidden';
+const USERNAME_KEY ='username';
+
 loginForm.addEventListener('submit', loginFormOnSubmit);
 
 function loginFormOnSubmit(event) {
     const username = loginInput.value;
     event.preventDefault();  
-    console.log(username); 
-    loginForm.classList.add('hidden');
-    greeting.classList.remove('hidden');
+    // not showing loginform
+    loginForm.classList.add(HIDDEN_CLASS);
+    // save the username in localstorage
+    localStorage.setItem(USERNAME_KEY, username);
+    // show greeting
+    showGreetingMessage(username);
+}
+
+function showGreetingMessage (username) {
+    greeting.classList.remove(HIDDEN_CLASS);
     greeting.innerText = `Welcome, ${username}`;
 }
 
+
+
+// after login- not showing the login form
+// login value is null, show login form, if notnull remove loginform
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+if (savedUsername === null) {
+    // show loginform
+    loginForm.classList.remove(HIDDEN_CLASS);
+} else {
+    // not show loginform
+    loginForm.classList.add(HIDDEN_CLASS);
+    // show greeing
+    showGreetingMessage(savedUsername);    
+}
