@@ -12,7 +12,7 @@ const USERNAME_KEY ='username';
 
 
 // after login- not showing the login form
-// login value is null, show login form, if notnull remove loginform
+// login value is  null, show login form, if notnull remove loginform
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
 if (savedUsername === null) {
@@ -41,4 +41,6 @@ function loginFormOnSubmit(event) {
 function showGreetingMessage (username) {
     greeting.classList.remove(HIDDEN_CLASS);
     greeting.innerText = `Welcome, ${username}`;
+
+    
 }

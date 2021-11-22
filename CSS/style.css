@@ -1,3 +1,7 @@
 .hidden {
     display: none;
 }
+
+button > i {
+    pointer-events: none;
+} 
