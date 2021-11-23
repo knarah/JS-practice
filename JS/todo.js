@@ -5,16 +5,21 @@ let toDos =[];
 const savedTodos = localStorage.getItem('toDos');
 const parsedToDos = JSON.parse(savedTodos);
 
-//3. save toDos in local storage
-function saveToDos(inputValue){
-    localStorage.setItem('toDos', JSON.stringify(toDos));
-
-}
-
-//4. Display saved todo list
-
 DisplaySavedTodos();
-//1. get input value
+
+function DisplaySavedTodos() {
+    if(savedTodos) {
+        parsedToDos.forEach(DisplayToDos);
+        toDos = parsedToDos;
+        // for (let i = 0; i < parsedToDos.length; i++) {
+        //     DisplayToDos(parsedToDos[i]);
+        // }
+   }
+ }
+
+function saveToDos(){
+    localStorage.setItem('toDos', JSON.stringify(toDos));
+}
 
 function handleToDoSubmit(event){
     event.preventDefault();
@@ -24,17 +29,6 @@ function handleToDoSubmit(event){
     toDos.push(inputValue);
     saveToDos();
 }
-
-function DisplaySavedTodos() {
-    console.log(savedTodos);
-    if(savedTodos) {
-        parsedToDos.forEach(DisplayToDos);
-        toDos = parsedToDos;
-        // for (let i = 0; i < parsedToDos.length; i++) {
-        //     DisplayToDos(parsedToDos[i]);
-        // }
-   }
- }
 
 function DisplayToDos(value){
     
@@ -52,12 +46,21 @@ function DisplayToDos(value){
 
 function deleteTodo(event){
     const oldTodo = event.target.parentNode;
-    console.log(oldTodo); 
-    oldTodo.remove();   
+    const oldTodoValue = oldTodo.textContent;
+    console.dir(oldTodo); 
+    oldTodo.remove(deleteTodoFromLocalStorage(oldTodoValue));   
+}
+
+function deleteTodoFromLocalStorage(oldTodoValue){
+    console.log(parsedToDos);
+    //not sure about this part
+    let index = parsedToDos.indexOf(oldTodoValue);
+        if (index !== -1) {
+        parsedToDos.splice(index, 1 );
+        toDos = parsedToDos;
+        saveToDos();
+        }
 }
     
-
 toDoForm.addEventListener('submit', handleToDoSubmit);
-
-
-//display the value 
+ 
