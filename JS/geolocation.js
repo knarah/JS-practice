@@ -15,17 +15,19 @@ function succeed(position) {
         const temp = data.main.temp;
         const feelsLike = data.main.feels_like;
         const weather = data.weather[0].main;
-        console.log(name);
-        console.log(temp);
-        console.log(feelsLike);
-        console.log(weather);
+        // Adding info in HTML
+        const name_span = document.querySelector('#name');
+        const temp_span = document.querySelector('#temp');
+        const feelsLike_span = document.querySelector('#feelsLike');
+        const weather_span = document.querySelector('#weather');
+        name_span.innerText = name;
+        temp_span.innerText = temp;
+        feelsLike_span.innerText = feelsLike;
+        weather_span.innerText = weather;
+        
     })
 }
 
 function fail(){
     alert('Can\' get the location info');
-}
-
-function displayInfo() {
-    
 }
