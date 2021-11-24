@@ -51,5 +51,6 @@ const bgImgs = [
 const chosenImg = bgImgs[Math.floor(Math.random()*bgImgs.length)];
 
 // put this random index in the HTML
-document.querySelector(".bgimg").src = `img/${chosenImg.img}`;
-document.querySelector(".bgimg").alt = chosenImg.alt;
+//document.querySelector(".bgimg").src = `img/${chosenImg.img}`;
+//document.querySelector(".bgimg").alt = chosenImg.alt;
+document.body.style.backgroundImage = `url('img/${chosenImg.img}')`;

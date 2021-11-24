@@ -5,21 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" type="image/x-icon" href="fav/favicon.png">
     <!--Font Awesome -->
     <script src="https://kit.fontawesome.com/09de26536d.js" crossorigin="anonymous"></script>
-    <title>Momentum</title>
+
+    <!-- Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@500;700&family=Yuji+Syuku&display=swap');
+        </style>
+
+    <title>MOMENTUM</title>
 </head>
 <body>
-    <form class = "login_form">
-        <input 
-            required
-            maxlength="15"
-            type="text" 
-            autofocus
-            placeholder="What is your name?" />
-        <button>Log In</button>
-    </form>
-    <h1 id="greeting" class="hidden">Greeting from html</h1>
+    <div class="greetingUser">
+        
+        <form class = "login_form">
+            <input 
+                required
+                maxlength="15"
+                type="text" 
+                autofocus
+                placeholder="What is your name?" />
+            <button>Log In</button>
+        </form>
+        <h1 id="greeting" class="hidden">Greeting from html</h1>
+    </div>
+    
     <h2 id="clock">clock from HTML</h2>
     <div class="quotes">
         <span>Quote from HTML</span></br>
@@ -40,7 +51,7 @@
         <span id="feelsLike"></span>
         <span id="weather"></span>
     </div>
-    <img class="bgimg" src="" alt="from HTML">
+    <!-- <img class="bgimg" src="" alt="from HTML"> -->
 
     
     <script src="JS/greeting.js" defer></script>
@@ -48,6 +59,6 @@
     <script src="JS/quotes.js" defer></script>
     <script src="JS/bgimg.js" defer></script>
     <script src="JS/todo.js" defer></script>
-    <script src="JS/geolocation.js" defer></script>
+    <!--<script src="JS/geolocation.js" defer></script>-->
 </body>
 </html>
