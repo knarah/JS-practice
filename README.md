@@ -2,7 +2,7 @@
 https://knarah.github.io/JS-practice/
 <h2>Chrome Extention Momentum with JavaScript</h3><hr>
 <h4>Overview</h4>
-Replace new tab page with a personal dashboard featuring to-do, weather, and inspiration.</br>
+Replace new tab page with a personal dashboard featuring to-do, weather, and inspiration.</br></br>
 <span>
 <img src=/for_github_readme/1.png alt=screenshot>
 <img src=/for_github_readme/2.png alt=screenshot>
@@ -12,7 +12,7 @@ Replace new tab page with a personal dashboard featuring to-do, weather, and ins
 <img src=/for_github_readme/6.png alt=screenshot>
 </span>
 
-<h4>Function</h4>
+<h4>Functions</h4>
 <ul>
  <li>Dynamically displaying background images and inspiring quotes</li>
  <li>Get Weather API, displaying real time weather information</li>
