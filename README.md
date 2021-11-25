@@ -1,5 +1,5 @@
-# JS-practice
-https://knarah.github.io/JS-practice/
+# Momentum: Practice JavaScript
+https://knarah.github.io/Momentum/
 <h2>Chrome Extention Momentum with JavaScript</h3><hr>
 <h4>Overview</h4>
 Replace new tab page with a personal dashboard featuring to-do, weather, and inspiration.</br></br>
