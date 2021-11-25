@@ -21,9 +21,9 @@ function succeed(position) {
         const feelsLike_span = document.querySelector('#feelsLike');
         const weather_span = document.querySelector('#weather');
         name_span.innerText = name;
-        temp_span.innerText = temp;
-        feelsLike_span.innerText = feelsLike;
-        weather_span.innerText = weather;
+        temp_span.innerText = `Temperature:  ${temp}`;
+        feelsLike_span.innerText = `Feels Like:  ${feelsLike}`;
+        weather_span.innerText = `Weather:  ${weather}`;
         
     })
 }

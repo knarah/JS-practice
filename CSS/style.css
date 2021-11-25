@@ -1,15 +1,10 @@
 :root {
-    /* font */
+    /* font-family */
     --font1: 'Bebas Neue', cursive;
     --font2: 'Sora', sans-serif;
-    --font3: 'Yuji Syuku', serif;
+    --font3: 'Merriweather', serif;
+    --font4: 'Libre Baskerville', serif;
 
-    /* size */
-
-    --small: 18px;
-    --medium: 24px;
-    --large: 62px;
-    --xlarge: 74px;
 
     /* font weight*/
 
@@ -23,42 +18,70 @@
     --grey: #baabab;
     --darkGrey: #677e7e;
     --black: #1a1a1a;
-    --darkBlue: #453ba3;
+    --darkBlue: #3b2dbb;
 
+    /* shadow */
     --shadow-white: 0.5px 1px var(--white);
-    --shadow-black: 0.5px 1px var(--black);
+    --shadow-black: 1.5px 1.5px var(--black);
+    --shadow-darkBlue: 1px 1px var(--darkBlue);
     /* border */
     --roundBorder: 10px;
 }
 
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: auto;
-    width: 100vh;
+
+    width: 100vw;
     height: 100vh;
+    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;  
-    color: var(--darkBlue); 
+    color: var(--white); 
     font-family: var(--font1); 
+    font-weight: var(--thin);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Weather */
+
+.weatherInfo {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    margin: 1em;
+    text-align: right;
+    font-size: 1.5em;
+    text-shadow: var(--shadow-darkBlue);
+    
 }
 
 /* Greeting */
 .greetingUser {
+    
     margin-top: 70px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: rgba(214, 226, 203, 0.466);
+    
     /* border-radius: var(--roundBorder); */
 }
 #greeting {
     margin: 0;
-    padding-top: 10px;
-    font-size: var(--large);
-    text-shadow: var(--shadow-white);
-    
-    
+    padding: 10px 10px 0 10px;
+    font-size: 4em;
+    text-shadow: var(--shadow-darkBlue);   
+
 }
 
 /* User login */
@@ -69,18 +92,20 @@ body {
     
 }
 
+input {
+    border: none;
+    
+    text-align: center;
+    text-shadow: var(--shadow-black);
+    background: rgba(214, 226, 203, 0); 
+}
+
 .login_form input{
     margin-top: 5px;
     padding: 5px 5px 3px;
-    background: rgba(214, 226, 203, 0); 
-    border: none;
-    border-bottom: solid var(--darkBlue);
     font-family: var(--font1);
-    font-size: var(--medium);
-    text-align: center;
-    text-shadow: var(--shadow-black);
-   
-    /* height: 2em; */
+    font-size: 2em; 
+    border-bottom: solid var(--darkBlue);
 }
 
 .login_form button {
@@ -89,18 +114,98 @@ body {
     background-color: Transparent;
     border: none;
     font-family: var(--font1);
-    font-size: var(--medium);
+    font-size: 1.5em;
     color: var(--darkBlue);
 }
 
 .login_form button:hover {
     cursor: pointer;
-    text-shadow: var(--shadow-white);
-    
-    
-    
+    text-shadow: var(--shadow-white);   
 }
 
+/* Clock */
+
+#clock {
+    margin: 0px 0px 0.2em;
+    font-size: 8em;
+    text-align: center;
+    color: var(--white);
+    text-shadow: var(--shadow-darkBlue);
+    font-family: var(--font2);
+}
+
+/* Todos */
+.todos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    text-align: center;
+    text-shadow: var(--shadow-black);
+    background: rgba(214, 226, 203, 0);
+    
+}
+.todos_form {
+    border: none;
+    border-bottom: solid var(--darkBlue);
+    width: 100%;
+    padding: 2px 30px;
+}
+
+.todos_form input {
+    font-family: var(--font3);
+    font-size: 1.5em; 
+    width: 100%;
+    color: var(--lightGrey);
+}
+
+ul {
+    list-style-type: none;
+}
+
+#todos_list {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0px 10px;
+    background-color: rgba(8, 8, 8, 0.507);
+
+}
+#todos_list > li{
+    display: flex;
+    justify-content: space-between;
+}
+#todos_list > li > button {
+    margin: 2px 2px;
+    cursor: pointer;
+    opacity: 50%;
+}
+#todos_list > li > span {
+    margin: 4px 0px 2px;
+}
+#todos_list > li > button:hover {
+    color: var(--darkBlue);
+    opacity: 100%;
+}
+
+/* Quotes */
+
+.quotes {
+    display: block;
+    width: 100vw;
+    text-align: center;
+    margin: 30px;
+    /* font */
+    font-family: var(--font4);
+    font-size: 0.8em;
+    color: var(--lightGrey);
+    text-shadow: var(--shadow-black);
+}
+.quotes > span {
+    margin-top: 0.5em;
+}
 
 .hidden {
     display: none;

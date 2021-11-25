@@ -18,8 +18,8 @@ const bgImgs = [
     alt: "04.jpg",
 },
 { 
-    img: "05.png",
-    alt: "05.png",
+    img: "05.jpg",
+    alt: "05.jpg",
 },
 { 
     img: "06.jpg",
@@ -44,6 +44,18 @@ const bgImgs = [
 { 
     img: "11.jpg",
     alt: "11.jpg",
+},
+{ 
+    img: "12.jpg",
+    alt: "12.jpg",
+},
+{ 
+    img: "13.jpg",
+    alt: "13.jpg",
+},
+{ 
+    img: "14.jpg",
+    alt: "14.jpg",
 },
 ];
 

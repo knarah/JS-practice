@@ -11,14 +11,20 @@
 
     <!-- Fonts -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@500;700&family=Yuji+Syuku&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:wght@400;700&family=Merriweather:ital,wght@1,300;1,700&family=Sora&display=swap');
         </style>
 
     <title>MOMENTUM</title>
 </head>
 <body>
-    <div class="greetingUser">
-        
+    <div class="weatherInfo">
+        <span id="name"></span>
+        <span id="temp"></span>
+        <span id="feelsLike"></span>
+        <span id="weather"></span>
+    </div>
+    <div class="container">
+        <div class="greetingUser">
         <form class = "login_form">
             <input 
                 required
@@ -29,28 +35,26 @@
             <button>Log In</button>
         </form>
         <h1 id="greeting" class="hidden">Greeting from html</h1>
+        </div>>
+        <h2 id="clock">clock from HTML</h2>
+
+        <div class="todos">
+            <form class="todos_form">
+                <input required type="text" 
+                    autofocus  
+                    placeholder="What is your main focus for today?">   
+            </form>
+                <ul id="todos_list">
+                </ul>    
+        </div>
     </div>
-    
-    <h2 id="clock">clock from HTML</h2>
+
     <div class="quotes">
         <span>Quote from HTML</span></br>
         <span>Author from HTML</span>
     </div>
-    <div class="todos">
-        <form class="todos_form">
-            <input required type="text" 
-            autofocus  
-            placeholder="Things to do">   
-        </form>
-        <ul id="todos_list">
-        </ul>
-    </div>
-    <div class="weatherInfo">
-        <span id="name"></span>
-        <span id="temp"></span>
-        <span id="feelsLike"></span>
-        <span id="weather"></span>
-    </div>
+    
+    
     <!-- <img class="bgimg" src="" alt="from HTML"> -->
 
     
@@ -59,6 +63,6 @@
     <script src="JS/quotes.js" defer></script>
     <script src="JS/bgimg.js" defer></script>
     <script src="JS/todo.js" defer></script>
-    <!--<script src="JS/geolocation.js" defer></script>-->
+    <script src="JS/geolocation.js" defer></script>
 </body>
 </html>
