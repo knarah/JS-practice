@@ -52,8 +52,6 @@ function deleteTodo(event){
 }
 
 function deleteTodoFromLocalStorage(oldTodoValue){
-    //console.log(parsedToDos);
-    //not sure about this part
     let index = parsedToDos.indexOf(oldTodoValue);
         if (index !== -1) {
         parsedToDos.splice(index, 1 );
