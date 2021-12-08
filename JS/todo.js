@@ -47,7 +47,7 @@ function DisplayToDos(value){
 function deleteTodo(event){
     const oldTodo = event.target.parentNode;
     const oldTodoValue = oldTodo.textContent;
-    console.dir(oldTodo); 
+    //console.dir(oldTodo); 
     oldTodo.remove(deleteTodoFromLocalStorage(oldTodoValue));   
 }
 
