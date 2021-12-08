@@ -7,20 +7,6 @@ const parsedToDos = JSON.parse(savedTodos);
 
 DisplaySavedTodos();
 
-function DisplaySavedTodos() {
-    if(savedTodos) {
-        parsedToDos.forEach(DisplayToDos);
-        toDos = parsedToDos;
-        // for (let i = 0; i < parsedToDos.length; i++) {
-        //     DisplayToDos(parsedToDos[i]);
-        // }
-   }
- }
-
-function saveToDos(){
-    localStorage.setItem('toDos', JSON.stringify(toDos));
-}
-
 function handleToDoSubmit(event){
     event.preventDefault();
     const inputValue = toDoInput.value;
@@ -30,9 +16,23 @@ function handleToDoSubmit(event){
     saveToDos();
 }
 
+function DisplaySavedTodos() {
+    if(savedTodos) {
+        parsedToDos.forEach(DisplayToDos);
+        toDos = parsedToDos;
+       
+   }
+ }
+
+function saveToDos(){
+    localStorage.setItem('toDos', JSON.stringify(toDos));
+}
+
+
+
 function DisplayToDos(value){
     
-    const li = document.createElement('Li');
+    const li = document.createElement('li');
     const span = document.createElement('span');
     const toDoValue = document.createTextNode(value); 
     const deleteButton = document.createElement('button');    
@@ -52,7 +52,7 @@ function deleteTodo(event){
 }
 
 function deleteTodoFromLocalStorage(oldTodoValue){
-    console.log(parsedToDos);
+    //console.log(parsedToDos);
     //not sure about this part
     let index = parsedToDos.indexOf(oldTodoValue);
         if (index !== -1) {
