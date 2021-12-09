@@ -46,8 +46,7 @@ function deleteTodo(event){
 }
 
 function deleteTodoFromLocalStorage(oldTodoID){
-    console.log(parsedToDos);
-    console.log(oldTodoID);
+
     let index = parsedToDos.findIndex(element => element.id == oldTodoID);
     console.log(`index ${index}`);
         if (index !== -1) {
